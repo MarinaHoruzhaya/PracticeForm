@@ -21,7 +21,7 @@ public class RegistrationPage {
             subjectsInput = $("#subjectsInput"),
             birthDateInput = $("#dateOfBirthInput"),
             hobbiesInput = $("#hobbiesWrapper"),
-            userAdress = $("#currentAddress"),
+            currentAdress = $("#currentAddress"),
             uploadPictureInput = $("#uploadPicture"),
             stateInput = $("#state"),
             cityInput = $("#city"),
@@ -75,7 +75,7 @@ public class RegistrationPage {
     }
 
     public RegistrationPage setCurrentAdress (String adress){
-        userAdress.setValue(adress);
+        currentAdress.setValue(adress);
         return this;
     }
 
