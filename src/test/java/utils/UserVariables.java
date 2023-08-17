@@ -1,20 +1,20 @@
 package utils;
-import static utils.RandomUtils.*;
 
 public class UserVariables {
 
-   public static String firstName = getRandomFirstName(),
-        lastName = getRandomLastName(),
-        email = getRandomEmail(),
-        gender = getRandomGender(),
-        mobileNumber = getRandomMobileNumber(),
-        dayBirth = getRandomDay(),
-        monthBirth = getRandomMonth(),
-        yearBirth  = getRandomYear(),
-        subject = getRandomSubject(),
-        hobby = getRandomHobbie(),
-        picture = getRandomPicture(),
-        currentAddress = getRandomAddress(),
-        state = getRandomState(),
-        city = getRandomCity(state);
+   RandomUtils randomUtils = new RandomUtils();
+   public String firstName = randomUtils.getRandomFirstName(),
+        lastName = randomUtils.getRandomLastName(),
+        email = randomUtils.getRandomEmail(),
+        gender = randomUtils.getRandomGender(),
+        mobileNumber = randomUtils.getRandomMobileNumber(),
+        dayBirth = randomUtils.getRandomDay(),
+        monthBirth = randomUtils.getRandomMonth(),
+        yearBirth  = randomUtils.getRandomYear(),
+        subject = randomUtils.getRandomSubject(),
+        hobby = randomUtils.getRandomHobbie(),
+        picture = randomUtils.getRandomPicture(),
+        currentAddress = randomUtils.getRandomAddress(),
+        state = randomUtils.getRandomState(),
+        city = randomUtils.getRandomCity(state);
 }
