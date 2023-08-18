@@ -5,7 +5,7 @@ import java.util.concurrent.ThreadLocalRandom;
 
 public class RandomUtils {
 
-    static Faker faker = new Faker();
+    Faker faker = new Faker();
 
     public int getRandomInt(int min, int max){
         return ThreadLocalRandom.current().nextInt(min, max + 1);
@@ -43,7 +43,7 @@ public class RandomUtils {
     }
 
     public String getRandomDay(){
-        int day = getRandomInt(1, 31);
+        int day = getRandomInt(1, 28);
 
         if (day < 10) {
             return "0" + day;
