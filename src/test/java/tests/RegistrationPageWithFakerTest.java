@@ -1,22 +1,33 @@
 package tests;
 
+import io.qameta.allure.Owner;
+import io.qameta.allure.Severity;
+import io.qameta.allure.SeverityLevel;
+import org.junit.jupiter.api.DisplayName;
+import org.junit.jupiter.api.Tag;
 import org.junit.jupiter.api.Test;
 import pages.RegistrationPage;
 import utils.RandomUtils;
 import utils.UserVariables;
 
+import static io.qameta.allure.Allure.step;
 import static utils.UserVariables.*;
 
 public class RegistrationPageWithFakerTest extends TestBase {
     RegistrationPage registrationPage = new RegistrationPage();
     UserVariables userVariables = new UserVariables();
 
+    @DisplayName("Successful registration on form")
+    @Severity(SeverityLevel.BLOCKER)
+    @Owner("HoruzhayaMarina")
+    @Tag(value = "faker")
     @Test
     void fillFormTest() {
-
+        step("Open main page",() ->
         registrationPage.openPage()
-                .removeBanners()
-                .setFirstName(userVariables.firstName)
+                .removeBanners());
+        step("Fill the fields",() ->
+        registrationPage.setFirstName(userVariables.firstName)
                 .setLastName(userVariables.lastName)
                 .setUserEmail(userVariables.email)
                 .setGender(userVariables.gender)
@@ -28,8 +39,9 @@ public class RegistrationPageWithFakerTest extends TestBase {
                 .setCurrentAdress(userVariables.currentAddress)
                 .setState(userVariables.state)
                 .setCity(userVariables.city)
-                .clickSubmitButton();
+                .clickSubmitButton());
 
+        step("Check results", () ->
         registrationPage.checkResult(userVariables.firstName,"Student Name")
                     .checkResult(userVariables.email,"Student Email")
                     .checkResult(userVariables.gender,"Gender")
@@ -39,6 +51,6 @@ public class RegistrationPageWithFakerTest extends TestBase {
                     .checkResult(userVariables.hobby,"Hobbies")
                     .checkResult(userVariables.picture,"Picture")
                     .checkResult(userVariables.currentAddress,"Address")
-                    .checkResult(userVariables.state +" "+userVariables.city,"State and City");
+                    .checkResult(userVariables.state +" "+userVariables.city,"State and City"));
     }
 }
