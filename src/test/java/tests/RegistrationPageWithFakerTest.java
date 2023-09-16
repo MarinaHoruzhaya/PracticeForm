@@ -7,11 +7,9 @@ import org.junit.jupiter.api.DisplayName;
 import org.junit.jupiter.api.Tag;
 import org.junit.jupiter.api.Test;
 import pages.RegistrationPage;
-import utils.RandomUtils;
 import utils.UserVariables;
 
 import static io.qameta.allure.Allure.step;
-import static utils.UserVariables.*;
 
 public class RegistrationPageWithFakerTest extends TestBase {
     RegistrationPage registrationPage = new RegistrationPage();
