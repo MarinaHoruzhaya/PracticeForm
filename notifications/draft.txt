@@ -1,7 +1,0 @@
-autotest_qaGuru_bot
-6431578823:AAHfEwLdWoLXMUkirEru2Jx5HA0i1aZFBkU
--1001933986108
-
-https://api.telegram.org/bot6431578823:AAHfEwLdWoLXMUkirEru2Jx5HA0i1aZFBkU/getUpdates
-
-java "-DconfigFile=notifications/config.json" -jar notifications/allure-notifications-4.3.0.jar
